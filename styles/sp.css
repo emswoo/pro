@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#app {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#app2 {
+  background-color: #efe8ea;
+}
+
+.reverse-name {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1px;
+  padding-top: 40px;
+  -webkit-animation: flip;
+          animation: flip;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.reverse-button {
+  font-family: "Varela Round", sans-serif;
+  font-size: 15px;
+  color: white;
+  border: none;
+  padding: 7px 9px;
+  background: black;
+  outline: none;
+  display: table;
+  margin: auto;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+
+.reverse-button:hover {
+  color: gray;
+}
+
+.textInput {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 200px;
+}
+
+#todo-box {
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+  display: table;
+  margin: auto;
+}
+
+.todo-title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.futureTask {
+  list-style: none;
+  color: gray;
+}
+
+.input-box {
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+  outline: none;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: none;
+  line-height: 30px;
+  width: 230px;
+  height: 28px;
+  padding: 8px;
+}
+
+.add-button {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.close-button {
+  border: none;
+  margin-left: 18px;
+  margin-top: 10px;
+  outline: none;
+  vertical-align: bottom;
+}
+
+.taskList {
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+ul li:nth-child(n + 9) {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.scroll-down {
+  line-height: none;
+  -webkit-animation: bounce infinite;
+          animation: bounce infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.iconTop {
+  display: table;
+  margin: auto;
+}
+
+.top {
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.name {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  margin-left: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.about-me {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.carrer {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.skills {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.offer {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  border: 1px solid;
+  border-color: gray;
+}
+
+.under-hr {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.under-hr-skill {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.intro-details {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+}
+
+.icon-html,
+.icon-css,
+.icon-sass,
+.icon-bs,
+.icon-js,
+.icon-vue,
+.icon-nodejs,
+.icon-github,
+.icon-vs,
+.icon-gimp {
+  margin: 20px;
+}
+/*# sourceMappingURL=sp.css.map */

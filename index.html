@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <!-- CONTENTS -->
+    <div id="app">
+    <!-- REVERSE TITLE & REVERSE BUTTON -->
+    <div id="reverse-box">
+        <p class="reverse-name">{{ title }}</p>
+        <button class="reverse-button" @click="reverseTitle">
+        <img class="icon-arrow" v-bind:src="imageArrow" width="10" height="10">
+        &nbsp;Try me!</button>
+    </div>
+
+    <!-- TO DO LIST -->
+    <div id="todo-box">
+        <div class="todo-title">What to do?</p>
+        <p><input class="input-box" type="text" v-model="newTask">
+        <img class="add-button" @click="addTodo()" v-bind:src="imageAdd" width="23" height="23"></div>
+        <ul>
+           <li class="futureTask" v-for="todo in todos">
+              <label v-bind:class="{ done: todo.isCompleted }">
+              <input class="task-box" type="checkbox" v-model="todo.isCompleted"></label>
+              <span class="taskList" :class="{ 'complete': todo.isCompleted }">{{ todo.task }}</span>
+              <img class="close-button" @click="deleteTodo(todo)" v-bind:src="imageClose" width="23" height="23">
+           </li>
+        </ul>
+    </div>
+
+    <!-- V BUTTON -->
+    <footer>
+    <div id="scroll-box">
+        <p class="scroll-down"><a href="#app2">
+        <img v-bind:src="imageScrollDown" width="30" height="30"></a></p>
+        </div>
+    </footer>
+    </div>
+
+    <div id="app2">
+    <!-- 自己紹介ページ -->
+        <p class="name">Emmy Hayashi</p>
+        <p class="about-me">FACTS ABOUT ME</p>
+        <hr width="280" noshade>
+        <hr class="under-hr" width="200" noshade><br>
+        <p class="intro-details">
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。
+        </p>
+
+        <p class="carrer">CARRER</p>
+        <hr width="280" noshade>
+        <hr class="under-hr" width="200" noshade><br>
+        <p class="intro-details">
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。
+        </p>
+
+        <p class="skills">SKILL SET</p>
+        <hr width="280" noshade>
+        <hr class="under-hr-skill" width="200" noshade>
+    
+    <!-- スキルアイコンの並べ -->
+    <div class="container">
+        <div class="flex-item">
+            <p>HTML5<p>
+            <img class="icon-html" v-bind:src="imageHtml" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>CSS3</p>
+            <img class="icon-css" v-bind:src="imageCss" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>Sass</p>
+            <img class="icon-sass" v-bind:src="imageSass" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>Bootstrap</p>
+            <img class="icon-bs" v-bind:src="imageBs" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>JavaScript</p>
+            <img class="icon-js" v-bind:src="imageJs" width="50" height="50">
+        </div>
+        <div class="flex-item">
+            <p>Vue.js</p>
+            <img class="icon-vue" v-bind:src="imageVue" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>Node.js</p>
+            <img class="icon-nodejs" v-bind:src="imageNodejs" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>GitHub</p>
+            <img class="icon-github" v-bind:src="imageGithub" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>VS Code</p>
+            <img class="icon-vs" v-bind:src="imageVs" width="60" height="60">
+        </div>
+        <div class="flex-item">
+            <p>GIMP</p>
+            <img class="icon-gimp" v-bind:src="imageGimp" width="60" height="60">
+        </div>
+    </div>
+
+        <p class="offer">GALLERY</p>
+        <hr width="280" noshade>
+        <hr class="under-hr" width="200" noshade><br>
+        <p class="intro-details">
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。<br><br>
+        ウェブデザイナーを目指しています。<br>
+        独学でスキルを取得しました。
+        </p>
+    
+    <!-- TOP BUTTON -->
+        <a href="#app" v-smooth-scroll>
+        <img class="iconTop" v-bind:src="imageTop" width="30" height="30"></a>
+        <p class="top">TOP</p>
+    </div>
+
+    <!-- SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
